@@ -5,11 +5,15 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/home";
+import CreateScenario from "@/pages/create-scenario";
+import SharedScenario from "@/pages/shared-scenario";
 
 function Router() {
   return (
     <Switch>
       <Route path="/" component={Home}/>
+      <Route path="/create" component={CreateScenario}/>
+      <Route path="/shared/:shareId" component={SharedScenario}/>
       <Route component={NotFound} />
     </Switch>
   );
