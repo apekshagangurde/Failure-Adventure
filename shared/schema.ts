@@ -1,4 +1,4 @@
-import { pgTable, text, serial, integer, boolean, jsonb } from "drizzle-orm/pg-core";
+import { pgTable, text, serial, integer, boolean, jsonb, timestamp } from "drizzle-orm/pg-core";
 import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod";
 
@@ -27,6 +27,9 @@ export const scenarioSchema = z.object({
   choices: choiceSchema,
   responses: responseSchema,
   images: imageSchema,
+  isCustom: z.boolean().optional().default(false),
+  createdBy: z.string().optional(),
+  shareId: z.string().optional()
 });
 
 // Define the scenarios table
@@ -36,6 +39,10 @@ export const scenarios = pgTable("scenarios", {
   choices: jsonb("choices").notNull(),
   responses: jsonb("responses").notNull(),
   images: jsonb("images").notNull(),
+  isCustom: boolean("is_custom").default(false),
+  createdBy: text("created_by"),
+  shareId: text("share_id"),
+  createdAt: timestamp("created_at").defaultNow()
 });
 
 // Define the users table (just for reference, not actually used in this app)
@@ -52,6 +59,19 @@ export const insertUserSchema = createInsertSchema(users).pick({
   password: true,
 });
 
+// Custom scenario creation schema with validation
+export const createScenarioSchema = z.object({
+  question: z.string().min(10, "Question must be at least 10 characters"),
+  choices: choiceSchema,
+  responses: responseSchema,
+  images: imageSchema.optional().default({
+    A: "https://images.unsplash.com/photo-1555116505-38ab61800975?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+    B: "https://images.unsplash.com/photo-1555116505-38ab61800975?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+  }),
+  createdBy: z.string().optional(),
+  creatorName: z.string().min(2, "Creator name must be at least 2 characters").optional()
+});
+
 // Export types
 export type Choice = z.infer<typeof choiceSchema>;
 export type Response = z.infer<typeof responseSchema>;
@@ -60,3 +80,4 @@ export type Scenario = z.infer<typeof scenarioSchema>;
 export type InsertScenario = z.infer<typeof insertScenarioSchema>;
 export type InsertUser = z.infer<typeof insertUserSchema>;
 export type User = typeof users.$inferSelect;
+export type CreateScenario = z.infer<typeof createScenarioSchema>;

@@ -1,4 +1,4 @@
-import { users, type User, type InsertUser, scenarios, type Scenario, type InsertScenario } from "@shared/schema";
+import { users, type User, type InsertUser, scenarios, type Scenario, type InsertScenario, type CreateScenario } from "@shared/schema";
 
 // modify the interface with any CRUD methods
 // you might need
@@ -12,6 +12,11 @@ export interface IStorage {
   getAllScenarios(): Promise<Scenario[]>;
   getScenario(id: number): Promise<Scenario | undefined>;
   createScenario(scenario: InsertScenario): Promise<Scenario>;
+  
+  // Custom scenario methods
+  createCustomScenario(scenario: CreateScenario): Promise<Scenario>;
+  getCustomScenarios(): Promise<Scenario[]>;
+  getScenarioByShareId(shareId: string): Promise<Scenario | undefined>;
 }
 
 export class MemStorage implements IStorage {
@@ -370,6 +375,33 @@ export class MemStorage implements IStorage {
     const scenario: Scenario = { ...insertScenario, id };
     this.scenarios.set(id, scenario);
     return scenario;
+  }
+  
+  async createCustomScenario(createScenario: CreateScenario): Promise<Scenario> {
+    // Generate a random share ID for this custom scenario
+    const shareId = Math.random().toString(36).substring(2, 15);
+    
+    const id = this.currentScenarioId++;
+    const scenario: Scenario = { 
+      ...createScenario, 
+      id,
+      isCustom: true,
+      shareId,
+    };
+    
+    this.scenarios.set(id, scenario);
+    return scenario;
+  }
+  
+  async getCustomScenarios(): Promise<Scenario[]> {
+    return Array.from(this.scenarios.values())
+      .filter(scenario => scenario.isCustom)
+      .sort((a, b) => b.id - a.id); // Sort by newest first
+  }
+  
+  async getScenarioByShareId(shareId: string): Promise<Scenario | undefined> {
+    return Array.from(this.scenarios.values())
+      .find(scenario => scenario.shareId === shareId);
   }
 }
 
