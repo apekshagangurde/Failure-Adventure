@@ -20,7 +20,7 @@ export default function SharedScenario() {
   
   const { data: scenario, isLoading, isError } = useQuery({
     queryKey: ['/api/shared-scenarios', shareId],
-    queryFn: () => apiRequest<Scenario>(`/api/shared-scenarios/${shareId}`),
+    queryFn: () => apiRequest(`/api/shared-scenarios/${shareId}`),
     enabled: !!shareId,
   });
   

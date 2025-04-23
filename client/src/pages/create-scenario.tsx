@@ -31,7 +31,7 @@ export default function CreateScenario() {
   const [createdScenario, setCreatedScenario] = useState<null | any>(null);
   const [creatorName, setCreatorName] = useState("");
   const { toast } = useToast();
-  const navigate = useNavigate();
+  const [, navigate] = useLocation();
   
   // Form setup with validation
   const form = useForm<CreateScenario>({
@@ -57,13 +57,7 @@ export default function CreateScenario() {
   // Handle API call to create scenario
   const mutation = useMutation({
     mutationFn: (data: CreateScenario) => {
-      return apiRequest("/api/custom-scenarios", {
-        method: "POST",
-        body: JSON.stringify(data),
-        headers: {
-          "Content-Type": "application/json"
-        }
-      });
+      return apiRequest("/api/custom-scenarios", "POST", data);
     },
     onSuccess: (data) => {
       setCreatedScenario(data);
