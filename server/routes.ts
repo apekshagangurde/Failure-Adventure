@@ -6,10 +6,31 @@ import { scenarioSchema } from "@shared/schema";
 export async function registerRoutes(app: Express): Promise<Server> {
   // API routes with /api prefix
   
-  // Get all scenarios
+  // Helper function to shuffle array
+  function shuffleArray<T>(array: T[]): T[] {
+    const shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+  }
+
+  // Get all scenarios (shuffled)
   app.get("/api/scenarios", async (req, res) => {
     try {
-      const scenarios = await storage.getAllScenarios();
+      const allScenarios = await storage.getAllScenarios();
+      
+      // Get the count parameter, limit to maximum 20 scenarios
+      const count = Math.min(
+        parseInt(req.query.count as string) || 10,
+        20
+      );
+      
+      // Shuffle the scenarios and return requested number
+      const shuffled = shuffleArray(allScenarios);
+      const scenarios = shuffled.slice(0, count);
+      
       res.json(scenarios);
     } catch (error) {
       res.status(500).json({ message: "Failed to fetch scenarios" });

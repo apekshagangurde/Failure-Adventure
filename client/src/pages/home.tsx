@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useQuery } from "@tanstack/react-query";
-import { Scenario, GameScreen as GameScreenType } from "@/lib/types"; 
+import { Scenario, GameScreen as GameScreenType, UserChoice } from "@/lib/types"; 
 import { fallbackScenarios } from "@/lib/scenarios";
 import WelcomeScreen from "@/components/welcome-screen";
 import GameScreenComponent from "@/components/game-screen";
@@ -11,24 +11,44 @@ export default function Home() {
   const [currentScreen, setCurrentScreen] = useState<GameScreenType>("welcome");
   const [currentScenario, setCurrentScenario] = useState(0);
   const [selectedChoice, setSelectedChoice] = useState<'A' | 'B' | null>(null);
+  const [userChoices, setUserChoices] = useState<UserChoice[]>([]);
 
-  // Fetch scenarios from the API
-  const { data: scenarios = fallbackScenarios, isLoading } = useQuery<Scenario[]>({
+  // Fetch scenarios from the API - get 10 random scenarios
+  const { data: scenarios = fallbackScenarios, isLoading, refetch } = useQuery<Scenario[]>({
     queryKey: ['/api/scenarios'],
+    queryFn: () => fetch('/api/scenarios?count=10').then(res => res.json()),
     retry: 1,
     refetchOnWindowFocus: false,
   });
 
-  // Start the game
+  // Start the game with fresh scenarios
   const startGame = () => {
+    refetch();
     setCurrentScreen("scenario");
     setCurrentScenario(0);
     setSelectedChoice(null);
+    setUserChoices([]);
   };
 
   // Handle user choice
   const handleChoice = (choice: 'A' | 'B') => {
     setSelectedChoice(choice);
+    
+    // Record the user's choice
+    if (scenarios && scenarios[currentScenario]) {
+      const scenario = scenarios[currentScenario];
+      const newChoice: UserChoice = {
+        scenarioId: scenario.id,
+        question: scenario.question,
+        choice: choice,
+        choiceText: scenario.choices[choice],
+        responseText: scenario.responses[choice],
+        imageUrl: scenario.images[choice]
+      };
+      
+      setUserChoices(prev => [...prev, newChoice]);
+    }
+    
     setCurrentScreen("response");
   };
 
@@ -48,6 +68,7 @@ export default function Home() {
     setCurrentScreen("welcome");
     setCurrentScenario(0);
     setSelectedChoice(null);
+    setUserChoices([]);
   };
 
   // Define styles for the background
@@ -96,7 +117,10 @@ export default function Home() {
         )}
         
         {currentScreen === "results" && (
-          <ResultsScreen onRestart={resetGame} />
+          <ResultsScreen 
+            onRestart={resetGame} 
+            userChoices={userChoices}
+          />
         )}
       </div>
     </div>

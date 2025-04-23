@@ -181,6 +181,156 @@ export class MemStorage implements IStorage {
           A: "https://images.unsplash.com/photo-1515248137880-45e105b5e44a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
           B: "https://images.unsplash.com/photo-1508520001581-25afed9b1bc3?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
         }
+      },
+      {
+        question: "You're giving a presentation when your screen shares your personal browsing history. What do you do?",
+        choices: {
+          A: "Quickly close the window and continue as if nothing happened.",
+          B: "Make a joke about how your research for the presentation took some weird turns."
+        },
+        responses: {
+          A: "Everyone saw your 'how to pretend you know what you're talking about' searches. Your attempt to ignore it has failed spectacularly.",
+          B: "Your joke lands surprisingly well! A colleague even confesses they've watched the same cat videos. Crisis averted through humor!"
+        },
+        images: {
+          A: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+          B: "https://images.unsplash.com/photo-1573496358961-3c82861ab8f4?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+        }
+      },
+      {
+        question: "Someone calls out 'Hey!' behind you and you turn, but they were talking to someone else. What's your move?",
+        choices: {
+          A: "Pretend you were just stretching or checking something behind you.",
+          B: "Make eye contact and give a confident nod anyway."
+        },
+        responses: {
+          A: "Your sudden interest in the ceiling architecture isn't fooling anyone. The person gives you a sympathetic smile - we've all been there.",
+          B: "Your confident nod confuses them briefly, but they return it! You've just made a connection through pure awkwardness."
+        },
+        images: {
+          A: "https://images.unsplash.com/photo-1589156288859-f0cb0d82b065?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+          B: "https://images.unsplash.com/photo-1551966775-a4ddc8df052b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+        }
+      },
+      {
+        question: "Your stomach growls loudly during a silent moment in a meeting. How do you handle it?",
+        choices: {
+          A: "Ignore it completely and maintain intense eye contact with the speaker.",
+          B: "Pat your stomach and say 'I guess someone has an opinion on this topic!'"
+        },
+        responses: {
+          A: "Your poker face is impressive, but your colleague whispers 'lunch after this?' You've accidentally networked through your digestive system.",
+          B: "Your joke breaks the tension and several people laugh. The meeting suddenly feels more relaxed. Hunger: the great equalizer."
+        },
+        images: {
+          A: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+          B: "https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+        }
+      },
+      {
+        question: "You accidentally like a 3-year-old Instagram photo of someone you just met. What now?",
+        choices: {
+          A: "Unlike it immediately and hope they didn't get a notification.",
+          B: "Like several more recent photos to make it seem intentional."
+        },
+        responses: {
+          A: "Too late! They've already seen the notification. Enjoy your new reputation as the group's dedicated stalker.",
+          B: "Your photo-liking spree is now extremely obvious. They text you 'Enjoying my profile?' Your cover story needs work."
+        },
+        images: {
+          A: "https://images.unsplash.com/photo-1616469829941-c7200edec809?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+          B: "https://images.unsplash.com/photo-1534008757030-27299c4371b6?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+        }
+      },
+      {
+        question: "You're introduced to someone and immediately forget their name. When you need to introduce them to someone else, you:",
+        choices: {
+          A: "Say 'Have you two met?' and let them introduce themselves.",
+          B: "Mumble their name so badly they have to correct you."
+        },
+        responses: {
+          A: "Smooth move! Crisis averted, though they seem to suspect your clever name-forgetting evasion technique.",
+          B: "Your 'This is mmmrmph' gets you a raised eyebrow and 'It's Michael. We've met three times.' Name remembering is not your superpower."
+        },
+        images: {
+          A: "https://images.unsplash.com/photo-1501290741922-b56c0d0884af?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+          B: "https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+        }
+      },
+      {
+        question: "You send a screenshot of a conversation to the very person you were talking about. What's your damage control?",
+        choices: {
+          A: "Claim your account was hacked by a mischievous friend.",
+          B: "Own up to it and apologize immediately."
+        },
+        responses: {
+          A: "They're not buying your hacking story. Your 'friend' must be very interested in sharing screenshots of private conversations at 2 AM.",
+          B: "Your honesty is appreciated, though things will be awkward for a while. At least they know you're not a good liar - silver lining?"
+        },
+        images: {
+          A: "https://images.unsplash.com/photo-1580894732930-0babd100d356?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+          B: "https://images.unsplash.com/photo-1597138804456-e7dca7f59d5b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+        }
+      },
+      {
+        question: "During a video call, someone walks behind you in embarrassing clothing. You:",
+        choices: {
+          A: "Ignore it completely as if nothing happened.",
+          B: "Apologize and briefly explain the situation with humor."
+        },
+        responses: {
+          A: "Your poker face is impressive, but the chat is blowing up with comments about the 'unicorn onesie incident'. It will live in company lore forever.",
+          B: "Your quick explanation and laugh defuses the situation. Your boss admits their kid once ran in during a board meeting. Humanity: confirmed."
+        },
+        images: {
+          A: "https://images.unsplash.com/photo-1613979098226-9a5bbcd5b398?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+          B: "https://images.unsplash.com/photo-1591035897819-f4bdf739f446?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+        }
+      },
+      {
+        question: "You walk into a glass door in front of a crowd. Your next move?",
+        choices: {
+          A: "Inspect the door as if it's poorly designed and clearly the door's fault.",
+          B: "Laugh at yourself and take a theatrical bow."
+        },
+        responses: {
+          A: "Your serious inspection of the 'faulty door' isn't convincing anyone, especially since you left a perfect face print as evidence.",
+          B: "Your ability to laugh at yourself wins over the witnesses. A child high-fives you for 'the best door-bonk ever.' You're a legend now."
+        },
+        images: {
+          A: "https://images.unsplash.com/photo-1567445514258-80691216d651?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+          B: "https://images.unsplash.com/photo-1565034957851-89df1348edbb?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+        }
+      },
+      {
+        question: "Your credit card gets declined at dinner with friends. What do you do?",
+        choices: {
+          A: "Blame it on the bank's system and try another card.",
+          B: "Ask if someone can cover you and offer to pay them back immediately via app."
+        },
+        responses: {
+          A: "Your second card also gets declined. The awkwardness multiplies as you rummage through your wallet for a mythical working card.",
+          B: "Your friend covers the bill, and you send them the money right away. Crisis averted, though you'll be checking your bank account as soon as you get home."
+        },
+        images: {
+          A: "https://images.unsplash.com/photo-1574607383172-1421479aec9d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+          B: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+        }
+      },
+      {
+        question: "You accidentally send a risky text to your parent instead of your partner. What's your recovery plan?",
+        choices: {
+          A: "Send 'Sorry, wrong person!' and never speak of it again.",
+          B: "Claim your phone was stolen and that wasn't you."
+        },
+        responses: {
+          A: "Your parent replies 'I guessed that wasn't for me' with too many awkward emojis. Family gatherings will be weird for a while.",
+          B: "Your 'phone theft' story falls apart when you have to explain why the 'thief' only sent one inappropriate message then gave the phone back."
+        },
+        images: {
+          A: "https://images.unsplash.com/photo-1553775282-20af80779df7?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+          B: "https://images.unsplash.com/photo-1605565348518-bef3e7d6fed8?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+        }
       }
     ];
 
