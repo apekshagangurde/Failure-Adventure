@@ -50,12 +50,12 @@ export class MemStorage implements IStorage {
       {
         question: "You accidentally send a text meant for your friend to your crush. What do you do?",
         choices: {
-          A: "Apologize and explain.",
-          B: "Pretend it didn't happen and hope they don't notice."
+          A: "Send another text saying 'Oops, my friend stole my phone!'",
+          B: "Double down and add 'That was meant for you btw' even though it wasn't."
         },
         responses: {
-          A: "You immediately apologize, but the awkwardness lingers. At least you were honest!",
-          B: "You pretend it didn't happen, but your crush keeps glancing at their phone. Awkward."
+          A: "Your crush replies 'Weird, it looks like YOUR writing style...' Now you're caught in a lie AND they're analyzing your texting patterns.",
+          B: "Your crush actually believes you, starts responding to your accidental text seriously, and now you're trapped in a conversation you're completely unprepared for."
         },
         images: {
           A: "https://images.unsplash.com/photo-1554744512-d6c603f27c54?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
@@ -65,12 +65,12 @@ export class MemStorage implements IStorage {
       {
         question: "You wave at someone, but they're not waving at you. What do you do?",
         choices: {
-          A: "Pretend you were stretching.",
-          B: "Commit to the wave and smile anyway."
+          A: "Pretend you were swatting at a fly and make insect-killing noises.",
+          B: "Continue waving while slowly turning in a circle as if you're waving at everyone."
         },
         responses: {
-          A: "You smoothly transition into a stretch, but nobody's buying it. The memory will haunt you at 3 AM for years to come.",
-          B: "You keep waving with confidence. A stranger behind you waves back, confused but friendly. Accidental friend made!"
+          A: "Your impromptu fly-killing pantomime is so elaborate that someone calls pest control. Now you have to explain to an exterminator why they were summoned to a fly-free zone.",
+          B: "Your 360-degree waving spectacle catches everyone's attention. Someone starts filming what they think is a flash mob beginning. You are now the reluctant star of a TikTok called 'Weirdest Dance Ever'."
         },
         images: {
           A: "https://images.unsplash.com/photo-1499714608240-22fc6ad53fb2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
@@ -95,12 +95,12 @@ export class MemStorage implements IStorage {
       {
         question: "The cashier says 'Enjoy your meal' and you reply 'You too!'. What now?",
         choices: {
-          A: "Laugh it off and acknowledge the mistake.",
-          B: "Walk away quickly and never return to this establishment."
+          A: "Add 'I mean, enjoy serving other people's meals, not eating my meal, because that would be weird.'",
+          B: "Double down with 'Yes, feel free to take a bite, you look hungry.'"
         },
         responses: {
-          A: "You both laugh, and the cashier admits they've done the same thing. Awkward moment becomes a human connection!",
-          B: "You speed-walk out, but you really like their food. You're now doomed to use the delivery app with its ridiculous fees."
+          A: "Your rambling explanation somehow makes everything worse. The cashier stares blankly while the line behind you grows. Someone whispers 'Just move on, word-vomit.'",
+          B: "The cashier is stunned into silence by your offer. The manager overhears and now they're implementing a new staff policy about 'not accepting food from customers' with your photo attached."
         },
         images: {
           A: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
@@ -110,12 +110,12 @@ export class MemStorage implements IStorage {
       {
         question: "You're in an elevator when someone you barely know gets in. Do you:",
         choices: {
-          A: "Make small talk about the weather.",
-          B: "Pretend to be deeply focused on your phone."
+          A: "Announce 'Going up!' in your best elevator operator voice even though you're clearly going down.",
+          B: "Ask them to press a floor button for you when you're already standing right next to the panel."
         },
         responses: {
-          A: "You mention it might rain, they disagree, and you spend 12 floors debating cloud patterns. Elevator meteorology wasn't on your agenda today.",
-          B: "You stare at a blank screen for 30 seconds rather than risk conversation. Modern social skills at their finest!"
+          A: "They look concerned about your directional confusion and press the emergency button. You spend the next 45 minutes explaining to maintenance staff that you were just trying to be 'quirky'.",
+          B: "They awkwardly reach across you to press the button, accidentally pressing three wrong floors. Now you're both trapped in a multi-stop elevator journey of eternal silence."
         },
         images: {
           A: "https://images.unsplash.com/photo-1500841280667-c454583e3f34?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",

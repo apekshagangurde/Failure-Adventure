@@ -133,16 +133,14 @@ const ResultsScreen: React.FC<ResultsScreenProps> = ({ onRestart, userChoices })
                     
                     <h4 className="text-2xl font-bold text-[#FF6B6B] mb-2">{personalityResult.title}</h4>
                     
-                    <div className="flex justify-center mb-4">
-                      <motion.img 
-                        src={personalityResult.imageUrl}
-                        alt={personalityResult.title}
-                        className="w-32 h-32 object-cover rounded-full border-4 border-white shadow-md"
-                        initial={{ scale: 0.8 }}
-                        animate={{ scale: 1 }}
-                        transition={{ duration: 0.5 }}
-                      />
-                    </div>
+                    <motion.div 
+                      className="flex justify-center items-center h-24 mb-4 bg-gradient-to-r from-[#FF6B6B] to-[#4ECDC4] rounded-lg text-white"
+                      initial={{ scale: 0.8 }}
+                      animate={{ scale: 1 }}
+                      transition={{ duration: 0.5 }}
+                    >
+                      <span className="text-4xl font-bold italic px-4 py-2">#{personalityResult.title}</span>
+                    </motion.div>
                     
                     <p className="text-gray-700 mb-4">{personalityResult.description}</p>
                     

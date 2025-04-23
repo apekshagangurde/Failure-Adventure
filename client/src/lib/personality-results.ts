@@ -8,27 +8,27 @@ export function determinePersonalityResult(choicesACount: number, choicesBCount:
 
   if (ratioA > 0.75) {
     return {
-      title: "The Cautious Overthinker",
-      description: "You prefer to play it safe and minimize social risks. While this means fewer spectacular fails, you might be missing out on some of life's most entertaining moments. Remember, sometimes the best stories come from our most embarrassing failures!",
-      imageUrl: "https://images.unsplash.com/photo-1542596594-649edbc13630?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+      title: "AwkwardAvoidanceExpert",
+      description: "Congratulations! You're the human equivalent of a turtle retreating into its shell. Your risk-aversion game is so strong, you probably check for traffic three times before crossing an empty street. If they gave Olympic medals for overthinking social interactions, you'd win gold, silver, AND bronze. Your browser history definitely includes 'how to escape conversation without being rude' and 'is it weird if I...'",
+      imageUrl: ""
     };
   } else if (ratioA > 0.5) {
     return {
-      title: "The Practical Improviser",
-      description: "You balance caution with calculated risks. You're good at finding the middle path through awkward situations, adapting as needed while keeping your dignity mostly intact. Life's embarrassing moments rarely knock you down for long.",
-      imageUrl: "https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+      title: "SocialChameleon",
+      description: "You're like a social GPS constantly 'recalculating route.' You've perfected the art of the fake laugh and have at least seven different versions of it depending on who you're talking to. You probably rehearse conversations in the shower but still somehow say 'you too' when the waiter says 'enjoy your meal.' Your friends describe you as 'mostly normal' which is the most backhanded compliment ever, but you'll take it!",
+      imageUrl: ""
     };
   } else if (ratioA > 0.25) {
     return {
-      title: "The Social Surfer",
-      description: "You ride the waves of social awkwardness with a smile. While not completely reckless, you're willing to embrace the unpredictable nature of social interactions. Your ability to laugh at yourself wins you friends even in the most embarrassing situations.",
-      imageUrl: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+      title: "CringeConnoisseur",
+      description: "You're the person who accidentally replies-all to a company email and then DOUBLES DOWN with a meme. Your ability to transform mortifying moments into entertaining stories is unmatched. You've made peace with the fact that your life is basically a sitcom blooper reel. Your Google history includes 'how to recover from calling your boss mom' and 'is it too late to move to another country?' Your friends keep you around purely for entertainment value.",
+      imageUrl: ""
     };
   } else {
     return {
-      title: "The Chaos Embracer",
-      description: "You leap into awkward situations with enthusiasm! While this sometimes lands you in spectacularly embarrassing scenarios, your willingness to go with the flow and own your failures makes you memorable and often the life of the party. You've collected some legendary stories along the way!",
-      imageUrl: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+      title: "CatastropheMagnet",
+      description: "If there's an embarrassing situation within a 50-mile radius, you'll find it, improve it, and make it legendary. You don't just trip, you take down an entire wedding cake display. When you text the wrong person, it's not just anyone - it's your ex AND their new partner because somehow you're in a group chat. Your life motto is 'go big or go home' and the universe has decided you're never going home. You're the reason social media has a delete button.",
+      imageUrl: ""
     };
   }
 }
@@ -36,16 +36,22 @@ export function determinePersonalityResult(choicesACount: number, choicesBCount:
 // Get a funny quote based on the user's choices
 export function getFunnyQuote(choicesACount: number, choicesBCount: number): string {
   const funnyQuotes = [
-    "Your awkwardness level is so high, even your WiFi disconnects in social situations.",
-    "You don't just face awkward situations - you give them a warm hug and invite them to stay for dinner.",
-    "In the game of social graces, you're playing 4D chess while the rest of us are still learning checkers.",
-    "Your ability to transform epic fails into legendary stories is basically a superpower.",
-    "You navigate social disasters with the grace of a cat on a keyboard - chaotic but somehow still adorable.",
-    "Your awkward moments aren't bugs, they're features of your charming personality.",
-    "You've turned social awkwardness into an art form. Museums should be calling any day now.",
-    "If embarrassing moments were currency, you'd be a billionaire by now.",
-    "Your approach to awkwardness is like a meteor hitting Earth - spectacular, memorable, and slightly concerning.",
-    "You don't just walk into awkward situations, you dance into them with jazz hands."
+    "Your awkwardness level is so high, your Autocorrect just gives up and says 'You're on your own with this one.'",
+    "If social disasters were a currency, you'd make Elon Musk look middle-class.",
+    "You don't just attract awkward moments, you're like their cult leader. They worship you.",
+    "Your ability to create uncomfortable silences is practically a superpower. Have you considered working for the CIA?",
+    "You're the reason etiquette books need constant updates. They never see you coming.",
+    "You navigate social interactions like you're playing Minesweeper with your eyes closed. Bold strategy.",
+    "Your awkward encounters aren't just stories, they're cautionary tales that parents tell their children.",
+    "You're living proof that natural selection sometimes takes a coffee break.",
+    "Your social skills are like that IKEA furniture with missing pieces - technically functional but everyone's concerned.",
+    "Other people have a filter between their brain and mouth. Yours appears to be made of Swiss cheese.",
+    "Your cringe moments aren't just memories, they're your brain's favorite 3AM playlist.",
+    "You've turned blushing into an Olympic sport, and you're consistently taking home the gold.",
+    "Most people avoid awkwardness. You collect it like limited edition trading cards.",
+    "Your personal brand of chaos is so distinct, scientists should name it after you.",
+    "If failing upwards was an art form, you'd be hanging in the Louvre.",
+    "Some people worry about alien contact. Aliens worry about encountering you at a social gathering."
   ];
   
   // Select a quote based on the ratio of choices (with some randomness)
