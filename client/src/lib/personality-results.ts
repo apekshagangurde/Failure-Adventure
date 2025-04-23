@@ -8,26 +8,26 @@ export function determinePersonalityResult(choicesACount: number, choicesBCount:
 
   if (ratioA > 0.75) {
     return {
-      title: "AwkwardAvoidanceExpert",
-      description: "Congratulations! You're the human equivalent of a turtle retreating into its shell. Your risk-aversion game is so strong, you probably check for traffic three times before crossing an empty street. If they gave Olympic medals for overthinking social interactions, you'd win gold, silver, AND bronze. Your browser history definitely includes 'how to escape conversation without being rude' and 'is it weird if I...'",
+      title: "Safety Freak",
+      description: "You'd wear a helmet to eat soup. Your idea of risk is using a public bathroom without putting toilet paper on the seat. When people say 'live a little,' you're like 'no thanks, I might die.' You Google 'is it normal to...' so much that your search history looks like a medical dictionary written by a hypochondriac.",
       imageUrl: ""
     };
   } else if (ratioA > 0.5) {
     return {
-      title: "SocialChameleon",
-      description: "You're like a social GPS constantly 'recalculating route.' You've perfected the art of the fake laugh and have at least seven different versions of it depending on who you're talking to. You probably rehearse conversations in the shower but still somehow say 'you too' when the waiter says 'enjoy your meal.' Your friends describe you as 'mostly normal' which is the most backhanded compliment ever, but you'll take it!",
+      title: "Awkward Faker",
+      description: "You have 5 different fake laughs ready to go at all times. You say 'you too' when the dentist says 'open wide.' You practice conversations in your head but still mess them up. Your friends think you're normal, which just proves they're as weird as you are. Your personality is 50% anxiety and 50% pretending you don't have anxiety.",
       imageUrl: ""
     };
   } else if (ratioA > 0.25) {
     return {
-      title: "CringeConnoisseur",
-      description: "You're the person who accidentally replies-all to a company email and then DOUBLES DOWN with a meme. Your ability to transform mortifying moments into entertaining stories is unmatched. You've made peace with the fact that your life is basically a sitcom blooper reel. Your Google history includes 'how to recover from calling your boss mom' and 'is it too late to move to another country?' Your friends keep you around purely for entertainment value.",
+      title: "Human Blooper Reel",
+      description: "Your life is what happens between awkward moments. You've sent so many wrong texts to the right people that your friends have a support group. You don't just fall, you create new dance moves on the way down. The coffee shop employees have a nickname for you, and it's not flattering. You've made 'sorry about that' your personal catchphrase.",
       imageUrl: ""
     };
   } else {
     return {
-      title: "CatastropheMagnet",
-      description: "If there's an embarrassing situation within a 50-mile radius, you'll find it, improve it, and make it legendary. You don't just trip, you take down an entire wedding cake display. When you text the wrong person, it's not just anyone - it's your ex AND their new partner because somehow you're in a group chat. Your life motto is 'go big or go home' and the universe has decided you're never going home. You're the reason social media has a delete button.",
+      title: "Walking Disaster",
+      description: "If there's a way to make things weird, you'll find it. When you trip, you don't just fall - you take down displays, waiters, and small children with you. Your dating stories make people say 'well at least MY life isn't THAT bad.' You've turned embarrassment into an art form. If embarrassing moments were money, you'd be a billionaire by now.",
       imageUrl: ""
     };
   }
@@ -36,22 +36,22 @@ export function determinePersonalityResult(choicesACount: number, choicesBCount:
 // Get a funny quote based on the user's choices
 export function getFunnyQuote(choicesACount: number, choicesBCount: number): string {
   const funnyQuotes = [
-    "Your awkwardness level is so high, your Autocorrect just gives up and says 'You're on your own with this one.'",
-    "If social disasters were a currency, you'd make Elon Musk look middle-class.",
-    "You don't just attract awkward moments, you're like their cult leader. They worship you.",
-    "Your ability to create uncomfortable silences is practically a superpower. Have you considered working for the CIA?",
-    "You're the reason etiquette books need constant updates. They never see you coming.",
-    "You navigate social interactions like you're playing Minesweeper with your eyes closed. Bold strategy.",
-    "Your awkward encounters aren't just stories, they're cautionary tales that parents tell their children.",
-    "You're living proof that natural selection sometimes takes a coffee break.",
-    "Your social skills are like that IKEA furniture with missing pieces - technically functional but everyone's concerned.",
-    "Other people have a filter between their brain and mouth. Yours appears to be made of Swiss cheese.",
-    "Your cringe moments aren't just memories, they're your brain's favorite 3AM playlist.",
-    "You've turned blushing into an Olympic sport, and you're consistently taking home the gold.",
-    "Most people avoid awkwardness. You collect it like limited edition trading cards.",
-    "Your personal brand of chaos is so distinct, scientists should name it after you.",
-    "If failing upwards was an art form, you'd be hanging in the Louvre.",
-    "Some people worry about alien contact. Aliens worry about encountering you at a social gathering."
+    "Your life is like America's Funniest Home Videos, but it's just you falling down different sets of stairs.",
+    "Your friends keep you around to feel better about their own social skills.",
+    "You don't just put your foot in your mouth - you somehow fit both feet, all 10 toes, and a whole shoe store in there.",
+    "When God was giving out social skills, you thought he said 'social spills' and asked for extra.",
+    "Your brain and mouth are playing a never-ending game of telephone, and the message is always getting messed up.",
+    "If awkward moments were dollars, you'd have paid off the national debt by now.",
+    "Your social fails are so legendary they should be studied in science class.",
+    "When normal people have a bad day, they say 'it can't get worse.' You know for a fact it can and will.",
+    "You're not clumsy - gravity just likes you more than other people.",
+    "You don't break the ice, you fall through it and create a scene.",
+    "Your life should come with background music and a laugh track.",
+    "You're the reason they put warning labels on obvious things.",
+    "Every time you think you've reached peak awkwardness, you find a new summit to conquer.",
+    "Your daily goal: survive without becoming a viral video.",
+    "If embarrassment burned calories, you'd be a supermodel.",
+    "You've turned 'making things weird' into an Olympic sport, and you're taking home the gold."
   ];
   
   // Select a quote based on the ratio of choices (with some randomness)

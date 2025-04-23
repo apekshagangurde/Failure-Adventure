@@ -80,12 +80,12 @@ export class MemStorage implements IStorage {
       {
         question: "You forgot your coworker's name mid-conversation. What's your move?",
         choices: {
-          A: "Ask them to put their number in your phone to 'check the spelling'.",
-          B: "Introduce them to someone else hoping they say their name."
+          A: "Call them 'buddy' and 'dude' for the entire conversation.",
+          B: "Ask if they're on Instagram so you can 'follow them' but really just to see their name."
         },
         responses: {
-          A: "Clever move! They enter their contact as 'Mike (Your coworker for 3 years)'. They knew exactly what you were doing.",
-          B: "Your plan backfires when they say 'Oh, we've met!' and you now have two people whose names you don't remember."
+          A: "You call them 'buddy' 17 times in a 2-minute conversation. They think you're having a stroke. HR is now concerned about your mental health.",
+          B: "They say 'sure, I'm @johnsmith232' but you accidentally like their vacation photos from 3 years ago while stalking their profile. Double fail!"
         },
         images: {
           A: "https://images.unsplash.com/photo-1519575706483-221027bfbb31?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
@@ -125,12 +125,12 @@ export class MemStorage implements IStorage {
       {
         question: "You're at dinner and realize you have spinach in your teeth after talking for 10 minutes. What do you do?",
         choices: {
-          A: "Excuse yourself to the bathroom immediately.",
-          B: "Make a joke about it and remove it at the table."
+          A: "Smile bigger, thinking maybe no one will notice if you look confident enough.",
+          B: "Lick your teeth really obviously while maintaining eye contact."
         },
         responses: {
-          A: "You return from the bathroom to discover EVERYONE knew and no one told you. Your trust issues are now completely justified.",
-          B: "Your self-deprecating humor works! Everyone laughs, though your date whispers they were trying to signal you for minutes."
+          A: "Your big smile just puts your spinach on full display like a green billboard. Someone takes a picture 'for the memories' but you know it's for their group chat.",
+          B: "Your weird tongue gymnastics make everyone at the table stop talking. Your date later texts their friend: 'The date was going well until they started doing... something with their tongue?'"
         },
         images: {
           A: "https://images.unsplash.com/photo-1550975559-a676f35206bc?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
